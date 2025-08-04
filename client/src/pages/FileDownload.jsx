@@ -29,13 +29,15 @@ const FileDownload = () => {
       const hashedPassword = await hashPassword(password);
 
       const response = await axios.get(
-        `http://localhost:4000/download/${fileId}`,
-        { responseType: "blob",
-        headers: {
-          'Password': hashedPassword
-        }
-      }
-      );
+  `http://localhost:4000/download/${fileId}`,
+  {
+    responseType: "blob",
+    headers: {
+      'Password': hashedPassword
+    }
+  }
+);
+
 
 
       let filename = "decrypted_file";
@@ -134,42 +136,50 @@ const FileDownload = () => {
   };
   
 
-  return (
-    <div className="px-8 md:px-28 max-sm:px-2">
-      <PageHeader title="File Download Page" path="Home > File Download" />
-
-      <div className="py-16">
+return (
+  <div className="bg-[#191716] min-h-screen">
+    <div className="px-8 md:px-28 max-sm:px-2 py-16">
+      <div className="max-w-xl mx-auto bg-transparent">
         <div className="mb-6">
           <label
             htmlFor="id-input"
-            className="block mb-2 text-base font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-base font-medium text-white"
           >
             Enter File ID
           </label>
           <input
-            required={true}
+            required
             type="text"
             placeholder="Enter File ID"
             value={fileId}
             onChange={(e) => setFileId(e.target.value)}
             id="id-input"
-            className="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="block w-full max-w-md p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
-       
 
-        <AdvancedPasswordInput seePassword={seePassword} setSeePassword={setSeePassword} filePassword={password} setFilePassword={setPassword} idValue="file-password-decrypt" placeValue="Enter File Password" />
+        <AdvancedPasswordInput
+          seePassword={seePassword}
+          setSeePassword={setSeePassword}
+          filePassword={password}
+          setFilePassword={setPassword}
+          idValue="file-password-decrypt"
+          placeValue="Enter File Password"
+        />
 
         <button
           onClick={handleDownload}
           type="button"
-          className="w-full px-6 mt-5 py-3.5 text-lg font-medium text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-600 uppercase max-sm:text-base"
+          className="w-full max-w-md px-6 mt-6 py-3.5 text-lg font-medium text-white bg-[#CBA135] hover:bg-[#b08f2f] focus:ring-4 focus:outline-none focus:ring-[#d6b654] rounded-lg text-center uppercase"
         >
-          Download and decrypt
+          Download and Decrypt
         </button>
+
       </div>
     </div>
-  );
+  </div>
+);
+
 };
 
 export default FileDownload;

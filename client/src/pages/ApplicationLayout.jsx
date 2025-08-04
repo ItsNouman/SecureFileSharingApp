@@ -13,13 +13,18 @@ const ApplicationLayout = () => {
       toast.warn("You need to be logged in to access this page");
       navigate("/")
     }
-  }, [userId]);
+  }, [userId, navigate]);
 
   if (!isLoaded) return "Loading..."
+
   return (
-    <div className="p-5 px-8 md:px-28 max-sm:px-2">
-    <ApplicationTabs />
-    <Outlet />
+    <div className="w-full min-h-screen">
+      <div className="w-full">
+        <ApplicationTabs />
+      </div>
+      <div className="w-full">
+        <Outlet />
+      </div>
     </div>
   )
 }

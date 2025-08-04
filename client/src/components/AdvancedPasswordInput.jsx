@@ -4,37 +4,39 @@ import { FaRegEyeSlash } from "react-icons/fa";
 
 const AdvancedPasswordInput = ({seePassword, setSeePassword, filePassword, setFilePassword, idValue, placeValue}) => {
   return (
-    <div className="flex flex-col items-start">
-      <label
-        htmlFor={idValue}
-        className="block mb-2 text-base font-medium text-gray-900 dark:text-white"
-      >
-        Set File Password
-      </label>
-      <div className="relative w-full">
-        {seePassword ? (
-          <FaRegEyeSlash
-            className="text-2xl absolute right-5 top-4 cursor-pointer"
-            onClick={() => setSeePassword(!seePassword)}
-          />
-        ) : (
-          <FaRegEye
-            className="text-2xl absolute right-5 top-4 cursor-pointer"
-            onClick={() => setSeePassword(!seePassword)}
-          />
-        )}
+    <div className="mb-6 w-full">
+  <label
+    htmlFor={idValue}
+    className="font-medium text-white"
+  >
+    Set File Password
+  </label>
 
-        <input
-          required={true}
-          type={seePassword ? "text" : "password"}
-          placeholder={placeValue}
-          value={filePassword}
-          onChange={(e) => setFilePassword(e.target.value)}
-          id={idValue}
-          className="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        />
-      </div>
-    </div>
+  <div className="relative">
+    <input
+      required
+      type={seePassword ? "text" : "password"}
+      placeholder={placeValue}
+      value={filePassword}
+      onChange={(e) => setFilePassword(e.target.value)}
+      id={idValue}
+      className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400"
+    />
+
+    {seePassword ? (
+      <FaRegEyeSlash
+        className="text-xl absolute right-4 top-3.5 text-gray-600 cursor-pointer"
+        onClick={() => setSeePassword(!seePassword)}
+      />
+    ) : (
+      <FaRegEye
+        className="text-xl absolute right-4 top-3.5 text-gray-600 cursor-pointer"
+        onClick={() => setSeePassword(!seePassword)}
+      />
+    )}
+  </div>
+</div>
+
   );
 };
 
