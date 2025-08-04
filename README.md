@@ -1,3 +1,8 @@
-##Project Screenshot
+## Project Screenshots
 
-![SecureFileSharingApp](landing.png,features.png,send.png,receive.png,contact.png,price.png)
+![Landing Page](landing.png)
+![Features Page](features.png)
+![Send Page](send.png)
+![Receive Page](receive.png)
+![Contact Page](contact.png)
+![Pricing Page](price.png)
