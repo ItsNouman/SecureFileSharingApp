@@ -26,11 +26,11 @@ const features = [
 
 const LandingFeatures = () => {
   return (
-    <div className="text-center px-6 py-14 max-w-7xxl mx-auto bg-[#191716]">
-      <h2 className="text-5xl font-bold mb-4 max-sm:text-3xl">
+    <div className="text-center px-6 py-14 max-w-7xxl mx-auto bg-[#C7C1BE]">
+      <h2 className="text-5xl text-black font-bold mb-4 max-sm:text-3xl">
         People use <span className="text-blue-500">SecureShare</span> for
       </h2>
-      <p className="text-xl font-bold text-gray-600 max-sm:text-lg">
+      <p className="text-xl text-black font-bold text-gray-600 max-sm:text-lg">
         Send your files and photos <span className="text-blue-500 uppercase">SECURELY</span> with SecureShare{" "}
         <span className="text-blue-500 uppercase">ANYTIME</span> and{" "}
         <span className="text-blue-500 uppercase">ANYWHERE</span> in the world.

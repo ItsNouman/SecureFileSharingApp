@@ -2,7 +2,6 @@
 const nodemailer = require("nodemailer");
 require("dotenv").config();
 
-// If you're no longer using Mailjet, you can remove the Mailjet-related code.
 
 const sendEmail = async (receiverEmail, fileID, senderName = "Encrypt Share") => {
   try {

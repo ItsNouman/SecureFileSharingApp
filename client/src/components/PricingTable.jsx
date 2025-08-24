@@ -9,11 +9,11 @@ const pricingFeatures = {
 
 const PricingTable = () => {
   return (
-    <div className="text-center px-6 py-14 max-w-full mx-auto bg-[#191716]">
-      <h2 className="text-5xl font-bold mb-4 max-sm:text-3xl">
+    <div className="text-center px-6 py-14 max-w-full mx-auto bg-[#C7C1BE]">
+      <h2 className="text-5xl text-black font-bold mb-4 max-sm:text-3xl">
         Choose the plan for <span className="text-blue-500">you</span>
       </h2>
-      <p className="text-xl font-bold text-gray-600 max-sm:text-lg">
+      <p className="text-xl text-black font-bold text-gray-600 max-sm:text-lg">
         Pricing model made for you so you can enjoy all the benefits!
       </p>
 

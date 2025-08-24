@@ -137,13 +137,13 @@ const FileDownload = () => {
   
 
 return (
-  <div className="bg-[#191716] min-h-screen">
+  <div className="bg-[#C7C1BE] min-h-screen">
     <div className="px-8 md:px-28 max-sm:px-2 py-16">
       <div className="max-w-xl mx-auto bg-transparent">
         <div className="mb-6">
           <label
             htmlFor="id-input"
-            className="block mb-2 text-base font-medium text-white"
+            className="block mb-2 text-base font-medium text-black"
           >
             Enter File ID
           </label>

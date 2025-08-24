@@ -14,13 +14,13 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-[#191716] w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+    <nav className="bg-[#C7C1BE] w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
   <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 max-sm:flex-col max-sm:gap-y-5">
         <Link
           to="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <img src={Logo} width={90} height={230} alt="EncryptShare Logo" />
+          <img src={Logo} width={100} height={230} alt=" Logo" />
         </Link>
         <div className="flex md:order-2 space-x-3 md:space-x-2 rtl:space-x-reverse">
           <SignedOut>
@@ -79,41 +79,36 @@ const Header = () => {
           } w-full md:flex md:w-auto md:order-1`}
           id="navbar-sticky"
         >
-<ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-[#191716] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-[#191716]">
+<ul className="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg bg-[#C7C1BE] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-[#C7C1BE]">
   <li>
     <NavLink
       to="/"
       className={(isActiveObj) =>
         isActiveObj.isActive
-          ? "block py-2 px-3 font-bold text-white bg-blue-500 rounded md:bg-transparent md:text-blue-800 md:p-0 md:dark:text-blue-500"
-          : "block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+          ? "block py-2 px-3 font-bold text-black md:text-blue-800 md:p-0"
+          : "block py-2 px-3 text-black rounded hover:text-blue-700 md:p-0"
       }
     >
       Home
     </NavLink>
   </li>
 
-<li>
+  <li>
   <a
     href="#contact"
-    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 
-               md:hover:bg-transparent md:hover:text-blue-700 md:p-0
-               md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700
-               dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+    className="block py-2 px-3 text-black rounded hover:text-blue-700 md:p-0"
   >
     Contact
   </a>
 </li>
-
-
 
   <li>
     <NavLink
       to="/app"
       className={(isActiveObj) =>
         isActiveObj.isActive
-          ? "block py-2 px-3 text-white font-bold bg-blue-500 rounded md:bg-transparent md:text-blue-800 md:p-0 md:dark:text-blue-500"
-          : "block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+          ? "block py-2 px-3 font-bold text-black md:text-blue-800 md:p-0"
+          : "block py-2 px-3 text-black rounded hover:text-blue-700 md:p-0"
       }
     >
       Send File
@@ -125,14 +120,15 @@ const Header = () => {
       to="/download"
       className={(isActiveObj) =>
         isActiveObj.isActive
-          ? "block py-2 px-3 text-white font-bold bg-blue-500 rounded md:bg-transparent md:text-blue-800 md:p-0 md:dark:text-blue-500"
-          : "block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+          ? "block py-2 px-3 font-bold text-black md:text-blue-800 md:p-0"
+          : "block py-2 px-3 text-black rounded hover:text-blue-700 md:p-0"
       }
     >
       File Download
     </NavLink>
   </li>
 </ul>
+
 
         </div>
       </div>

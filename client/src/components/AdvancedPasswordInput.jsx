@@ -7,7 +7,7 @@ const AdvancedPasswordInput = ({seePassword, setSeePassword, filePassword, setFi
     <div className="mb-6 w-full">
   <label
     htmlFor={idValue}
-    className="font-medium text-white"
+    className="font-medium text-black"
   >
     Set File Password
   </label>

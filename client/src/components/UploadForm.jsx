@@ -148,7 +148,7 @@ const UploadForm = ({ progress }) => {
   };
 
   return (
-    <div className="w-full min-h-screen bg-[#191716] py-10 px-6 text-gray-800">
+    <div className="w-full min-h-screen bg-[#C7C1BE] py-10 px-6 text-gray-800">
       <div className="w-full px-4 md:px-12">
         <div className="text-center text-white text-3xl md:text-4xl font-bold mb-6">
           Send Your File Securely
@@ -191,7 +191,7 @@ const UploadForm = ({ progress }) => {
 
         {/* Receiver Email */}
         <div className="mb-6">
-          <label className="block mb-2 font-medium text-white">
+          <label className="block mb-2 font-medium text-black">
             Receiver's Email
           </label>
           <input
@@ -220,7 +220,7 @@ const UploadForm = ({ progress }) => {
           </div>
         )}
 
-        <p className="text-sm text-white mb-4">
+        <p className="text-sm text-black mb-4">
           Note: Remember to copy your password and send to the receiver. For
           security reasons, we don’t store passwords.
         </p>
