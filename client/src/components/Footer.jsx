@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Logo from "../assets/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { toast } from "react-toastify";
+import { API } from "../api";
 
 const API_BASE = import.meta.env.VITE_API_BASE || API;
 
