@@ -18,6 +18,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(xss());
 
+app.get("/" , async(req,res)=>{
+  res.send("Hello world");
+})
 const allowedOrigins = ["http://localhost:5173"];
 app.use(cors({
   origin: function (origin, cb) {
