@@ -21,17 +21,18 @@ app.use(xss());
 app.get("/" , async(req,res)=>{
   res.send("Hello world");
 })
-const allowedOrigins = ["http://localhost:5173"];
-app.use(cors({
-  origin: function (origin, cb) {
-    if (!origin) return cb(null, true); // allow tools like Postman
-    return allowedOrigins.includes(origin) ? cb(null, true) : cb(new Error("Not allowed by CORS"));
-  },
-  methods: ["GET", "POST", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-  exposedHeaders: ["Content-Disposition"],
-}));
+// const allowedOrigins = ["http://localhost:5173"];
+// app.use(cors({
+//   origin: function (origin, cb) {
+//     if (!origin) return cb(null, true); // allow tools like Postman
+//     return allowedOrigins.includes(origin) ? cb(null, true) : cb(new Error("Not allowed by CORS"));
+//   },
+//   methods: ["GET", "POST", "OPTIONS"],
+//   allowedHeaders: ["Content-Type", "Authorization"],
+//   exposedHeaders: ["Content-Disposition"],
+// }));
 app.options("*", cors()); 
+app.use(cors());
 
 const contactLimiter = rateLimit({
   windowMs: 60 * 1000, // 1 min
