@@ -76,6 +76,7 @@ app.post("/api/contact", contactLimiter, async (req, res) => {
 
 const sendEmailMailjet = require("./controllers/sendEmail");
 
+app.set('trust proxy', 1); // '1' means trust the first proxy
 
 
 const limiter = rateLimit({

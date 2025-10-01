@@ -3,7 +3,7 @@ import Logo from "../assets/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:4000";
+const API_BASE = import.meta.env.VITE_API_BASE || API;
 
 const Footer = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
