@@ -8,6 +8,7 @@ import {
 import axios from "axios";
 import { toast } from "react-toastify";
 import { z } from "zod";
+import {API} from "../api"
 
 const receiversEmailSchema = z.string().email();
 const passwordSchema = z

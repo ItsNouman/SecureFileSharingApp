@@ -3,6 +3,7 @@ import axios from "axios";
 import { AdvancedPasswordInput, PageHeader } from "../components";
 import { toast } from 'react-toastify'
 import { z } from "zod";
+import { API } from "../api";
 
 const FileDownload = () => {
   const [password, setPassword] = useState("");
