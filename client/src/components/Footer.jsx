@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import { toast } from "react-toastify";
 import { API } from "../api";
 
-const API_BASE = import.meta.env.VITE_API_BASE || API;
+
 
 const Footer = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -23,7 +23,7 @@ const Footer = () => {
     }
     setLoading(true);
     try {
-      const res = await fetch(`${API_BASE}/api/contact`, {
+      const res = await fetch(`${API}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

@@ -13,7 +13,7 @@ import {API} from "../api"
 const receiversEmailSchema = z.string().email();
 const passwordSchema = z
   .string()
-  .min(20, "Password field must be valid length and value");
+  .min(10, "Password field must be valid length and value");
 
 const UploadForm = ({ progress }) => {
   const [file, setFile] = useState();
@@ -103,7 +103,7 @@ const UploadForm = ({ progress }) => {
 
     if (!passwordSchema.safeParse(filePassword).success) {
       toast.warn(
-        "File password must be minimum 20 characters and must be string"
+        "File password must be minimum 10 characters and must be string"
       );
       return;
     }
